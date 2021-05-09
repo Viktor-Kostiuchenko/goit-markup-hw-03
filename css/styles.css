@@ -28,8 +28,31 @@ body {
   letter-spacing: 0.03em;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+}
+
+.section.traits,
+.section.activity {
+  padding: 0;
+  margin-bottom: 94px;
+}
+
+.section.staff {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-bottom: 0;
+}
+
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .link {
@@ -94,11 +117,23 @@ body {
   background-color: var(--secondary-bcg-color);
 }
 
+.container.address {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-contact .link {
   color: var(--footer-contact-color);
 }
 
+.footer-contact .mail {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
 .footer .location {
+  display: inline-block;
+  margin-bottom: 9px;
   color: var(--primary-white-color);
 }
 
@@ -115,19 +150,30 @@ body {
 /*? УКАЗАЛ БЕКГРАУНД ДЛЯ ВИДА */
 .hero {
   background-color: var(--secondary-bcg-color);
+  text-align: center;
+  margin-bottom: 94px;
 }
+
 .hero-title {
+  display: inline-block;
+  min-width: 696px;
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 /** Button */
 .button {
+  display: inline-block;
+  min-width: 200px;
+  border-radius: 4px;
+  border: 0px;
+  padding: 10px 32px;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   font-family: inherit;
@@ -143,6 +189,8 @@ body {
 
 /** Section */
 .section-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
   color: var(--title-text-color);
   font-size: 36px;
   line-height: 1.16;
@@ -151,10 +199,17 @@ body {
 
 /** Features */
 .feature-title {
+  margin-top: 0px;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-size: inherit;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+.feature-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 /** Team */
@@ -164,9 +219,17 @@ body {
 
 .team-member {
   background-color: var(--primary-white-color);
+  padding-bottom: 30px;
+}
+
+.member-photo {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .member-name {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -175,6 +238,7 @@ body {
 }
 
 .member-position {
+  margin: 0;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -183,7 +247,19 @@ body {
 /* ! ===================================THE END OF INDEX.HTML=================================== */
 
 /* ! =====================================PORTFOLIO.HTML=====================================*/
+.gallery {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
+.portfolio-title {
+  margin: 0;
+}
+
 .filter-category {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 0px;
   color: var(--title-text-color);
   background-color: var(--filter-bcg-color);
   font-weight: 500;
@@ -199,11 +275,22 @@ body {
   background-color: var(--accent-color);
 }
 
+.project-info {
+  display: inline-block;
+  padding: 20px 24px;
+}
+
 .project-title {
+  margin-top: 0px;
+  margin-bottom: 4px;
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+
+.project-caption {
+  margin: 0;
 }
 
 .project-caption {
