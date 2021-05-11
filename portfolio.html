@@ -16,17 +16,15 @@
 <body> 
    <!--! Шапка сайта-->
    <header class="header">
-      <div class="container">
+      <div class="container main-nav">
          <nav class="navigation">
             <a class="logo-primary link" href="./index.html" lang="en"> <span class="logo-accent">Web</span>Studio</a>
             <ul class="site-nav list">
-               <li class="navigation-item"><a class="link current" href="./index.html">Студия</a></li>
-               <li class="navigation-item"><a class="link" href="./portfolio.html">Портфолио</a></li>
+               <li class="navigation-item"><a class="link" href="./index.html">Студия</a></li>
+               <li class="navigation-item"><a class="link current" href="./portfolio.html">Портфолио</a></li>
                <li class="navigation-item"><a class="link" href="">Контакты</a></li>
             </ul>
          </nav>
-      </div>
-      <div class="container">
          <ul class="contact-nav list">
             <li class="contact-item">
                <a class="mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
@@ -35,6 +33,7 @@
                <a class="tel link" href="tel:+380961111111">+38 096 111 11 11</a>
             </li>
          </ul>
+      </div>
       </div>
    </header>
 
@@ -46,11 +45,11 @@
                <!--? Потом заголовок уберем-->
                <h1 class="portfolio-title">Демонстрация проектов</h1>
                <ul class="filters list">
-                  <li><button class="filter-category" type="button">Все</button></li>
-                  <li><button class="filter-category" type="button">Веб-сайты</button></li>
-                  <li><button class="filter-category" type="button">Приложения</button></li>
-                  <li><button class="filter-category" type="button">Дизайн</button></li>
-                  <li><button class="filter-category" type="button">Маркетинг</button></li>
+                  <li class="filter-item"><button class="filter-category" type="button">Все</button></li>
+                  <li class="filter-item"><button class="filter-category" type="button">Веб-сайты</button></li>
+                  <li class="filter-item"><button class="filter-category" type="button">Приложения</button></li>
+                  <li class="filter-item"><button class="filter-category" type="button">Дизайн</button></li>
+                  <li class="filter-item"><button class="filter-category" type="button">Маркетинг</button></li>
                </ul>
                <ul class="portfolio list">
                   <li class="project">
@@ -65,57 +64,73 @@
                   <li class="project">
                      <a class="project-card link" href="">
                         <img class="project-pic" src="./images/portfolio/poster.jpg" alt="плакат с баскетболистами" width="370" height="294">
-                        <h2 class="project-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
-                        <p class="project-caption">Дизайн</p>
+<div class="project-info">
+                           <h2 class="project-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+                           <p class="project-caption">Дизайн</p>
+</div>
                      </a>
                   </li>
                   <li class="project">
                      <a class="project-card link" href="">
-                        <img class="project-pic" src="./images/portfolio/restaurant.jpg" alt="логотип реторана" width="370" height="294">
-                        <h2 class="project-title">Ресторан <span lang="en">Seafood</span></h2>
-                        <p class="project-caption">Приложение</p>
+                           <img class="project-pic" src="./images/portfolio/restaurant.jpg" alt="логотип реторана" width="370" height="294">
+<div class="project-info">
+                                 <h2 class="project-title">Ресторан <span lang="en">Seafood</span></h2>
+                                 <p class="project-caption">Приложение</p>
+</div>
                      </a>
                   </li>
                   <li class="project">
                      <a class="project-card link" href="">
                         <img class="project-pic" src="./images/portfolio/prime.jpg" alt="наушники" width="370" height="294">
-                        <h2 class="project-title">Проект <span lang="en">Prime</span></h2>
-                        <p class="project-caption">Маркетинг</p>
+<div class="project-info">
+                           <h2 class="project-title">Проект <span lang="en">Prime</span></h2>
+                           <p class="project-caption">Маркетинг</p>
+</div>
                      </a>
                   </li>
                   <li class="project">
                      <a class="project-card link" href="">
                         <img class="project-pic" src="./images/portfolio/boxes.jpg" alt="две коробки" width="370" height="294">
-                        <h2 class="project-title">Проект <span lang="en">Boxes</span></h2>
-                        <p class="project-caption">Приложение</p>
+<div class="project-info">
+                           <h2 class="project-title">Проект <span lang="en">Boxes</span></h2>
+                           <p class="project-caption">Приложение</p>
+</div>
                      </a>
                   </li>
                   <li class="project">
                      <a class="project-card link" href="">
                         <img class="project-pic" src="./images/portfolio/inspiration.jpg" alt="монитор с картой мира" width="370" height="294">
-                        <h2 class="project-title" lang="en">Inspiration has no Borders</h2>
-                        <p class="project-caption">Веб-сайт</p>
+<div class="project-info">
+                           <h2 class="project-title" lang="en">Inspiration has no Borders</h2>
+                           <p class="project-caption">Веб-сайт</p>
+</div>
                      </a>
                   </li>
                   <li class="project">
                      <a class="project-card link" href="">
                         <img class="project-pic" src="./images/portfolio/edition.jpg" alt="глянцевый журнал" width="370" height="294">
-                        <h2 class="project-title">Издание <span lang="en">Limited Edition</span></h2>
-                        <p class="project-caption">Дизайн</p>
+<div class="project-info">
+                           <h2 class="project-title">Издание <span lang="en">Limited Edition</span></h2>
+                           <p class="project-caption">Дизайн</p>
+</div>
                      </a>
                   </li>
                   <li class="project">
                      <a class="project-card link" href="">
                         <img class="project-pic" src="./images/portfolio/lab.jpg" alt="этикетка" width="370" height="294">
-                        <h2 class="project-title">Проект <span lang="en">LAB</span></h2>
-                        <p class="project-caption">Маркетинг</p>
+<div class="project-info">
+                           <h2 class="project-title">Проект <span lang="en">LAB</span></h2>
+                           <p class="project-caption">Маркетинг</p>
+</div>
                      </a>
                   </li>
                   <li class="project">
                      <a class="project-card link" href="">
                         <img class="project-pic" src="./images/portfolio/business.jpg" alt="ноутбук с запущенным приложением" width="370" height="294">
-                        <h2 class="project-title" lang="en">Growing Business</h2>
-                        <p class="project-caption">Приложение</p>
+<div class="project-info">
+                           <h2 class="project-title" lang="en">Growing Business</h2>
+                           <p class="project-caption">Приложение</p>
+</div>
                      </a>
                   </li>
                </ul>
