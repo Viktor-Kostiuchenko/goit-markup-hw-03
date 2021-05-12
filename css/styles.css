@@ -14,6 +14,8 @@
   --staff-section-bcg-color: #e5e5e5;
   --filter-bcg-color: #f5f4fa;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
+  --header-border-color: #ececec;
+  --portfolio-border-color: #eeeeee;
   --primary-font: Roboto, sans-serif;
   --logo-font: Raleway, sans-serif;
 }
@@ -28,25 +30,66 @@ body {
   letter-spacing: 0.03em;
 }
 
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  outline: 2px solid tomato;
+img {
+  display: block;
 }
 
-.section.traits,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section.traits {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+
 .section.activity {
+  padding-top: 47px;
+  padding-bottom: 94px;
+}
+
+.section-title.visually-hidden,
+.portfolio-title.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
   padding: 0;
-  margin-bottom: 94px;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section.staff {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  margin-bottom: 0;
+  padding: 94px 0;
 }
 
 .list {
@@ -101,7 +144,7 @@ body {
   margin-left: auto;
 }
 
-.site-nav, 
+.site-nav,
 .contact-nav {
   display: flex;
 }
@@ -114,8 +157,7 @@ body {
 .site-nav .link,
 .contact-nav .link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 0;
   font-weight: 500;
   font-size: inherit;
   letter-spacing: 0.02em;
@@ -143,14 +185,13 @@ body {
 
 /* ! =====================================FOOTER===================================== */
 /** Footer */
-/*? УКАЗАЛ БЕКГРАУНД ДЛЯ ВИДА */
 .footer {
   background-color: var(--secondary-bcg-color);
 }
 
 .container.address {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
+  margin-right: auto;
 }
 
 .footer-contact .link {
@@ -164,6 +205,7 @@ body {
 
 .footer .location {
   display: inline-block;
+  margin-top: 20px;
   margin-bottom: 9px;
   color: var(--primary-white-color);
 }
@@ -178,18 +220,16 @@ body {
 
 /* ! ===================================INDEX.HTML=================================== */
 /** Hero */
-/*? УКАЗАЛ БЕКГРАУНД ДЛЯ ВИДА */
 .hero {
   background-color: var(--secondary-bcg-color);
   text-align: center;
-  margin-bottom: 94px;
+  padding: 200px 0;
 }
 
 .hero-title {
-  display: inline-block;
-  min-width: 696px;
-  margin-top: 0;
-  margin-bottom: 30px;
+  display: block;
+  width: 696px;
+  margin: 0 auto 30px;
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
@@ -200,11 +240,14 @@ body {
 
 /** Button */
 .button {
-  display: inline-block;
+  display: block;
+  padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
   min-width: 200px;
   border-radius: 4px;
-  border: 0px;
-  padding: 10px 32px;
+  border: none;
+
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   font-family: inherit;
@@ -219,14 +262,12 @@ body {
 
 /** Section */
 .section-title {
-  margin-top: 0px;
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 }
-
 
 /** Traits */
 .features {
@@ -242,17 +283,11 @@ body {
 }
 
 .feature-title {
-  margin-top: 0px;
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-size: inherit;
   line-height: 1.14;
   text-transform: uppercase;
-}
-
-.feature-text {
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 /** Activity */
@@ -267,7 +302,6 @@ body {
 .services .service-item:not(:last-child) {
   margin-right: 30px;
 }
-
 
 /** Staff */
 .team {
@@ -289,12 +323,10 @@ body {
 }
 
 .member-photo {
-  margin-top: 0;
   margin-bottom: 30px;
 }
 
 .member-name {
-  margin-top: 0;
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
@@ -304,7 +336,6 @@ body {
 }
 
 .member-position {
-  margin: 0;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -313,13 +344,8 @@ body {
 /* ! ===================================THE END OF INDEX.HTML=================================== */
 
 /* ! =====================================PORTFOLIO.HTML=====================================*/
-.gallery {
-  margin-top: 94px;
-  margin-bottom: 94px;
-}
-
-.portfolio-title {
-  margin: 0;
+.section.gallery {
+  padding: 94px 0;
 }
 
 .filters {
@@ -358,9 +384,9 @@ body {
 
 .project {
   width: calc((100% - 60px) / 3);
-  background-color: teal;
   margin-right: 30px;
   margin-bottom: 30px;
+  border-bottom: 1px solid var(--portfolio-border-color);
 }
 
 .project:nth-child(3n) {
@@ -377,16 +403,11 @@ body {
 }
 
 .project-title {
-  margin-top: 0px;
   margin-bottom: 4px;
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-}
-
-.project-caption {
-  margin: 0;
 }
 
 .project-caption {
@@ -396,5 +417,13 @@ body {
 }
 /* ! ================================THE END OF PORTFOLIO.HTML================================ */
 
+/* 
 
-имеджам дать display: block 
+
+
+/* padding ВО ВСЕХ СЕКЦИЯХ через класс секшн
+
+
+/* font-size 0 там где картинки/линки и дисплей инлайн-блок 
+
+*/
