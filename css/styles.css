@@ -5,6 +5,7 @@
 /* цвет фона футера #2F303A; */
 
 :root {
+  --item-gap: 30px;
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
@@ -32,6 +33,8 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -52,6 +55,17 @@ ol {
   padding-left: 0;
 }
 
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+
 .header {
   border-bottom: 1px solid var(--header-border-color);
 }
@@ -61,6 +75,10 @@ ol {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.section {
+  padding: 94px 0;
 }
 
 .section.traits {
@@ -92,19 +110,13 @@ ol {
   padding: 94px 0;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.link {
-  text-decoration: none;
-  font-style: normal;
-}
-
 /* ! =====================================HEADER===================================== */
-.container.main-nav {
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.header > .container {
   display: flex;
   align-items: center;
 }
@@ -157,7 +169,7 @@ ol {
 .site-nav .link,
 .contact-nav .link {
   display: block;
-  padding: 32px 0;
+
   font-weight: 500;
   font-size: inherit;
   letter-spacing: 0.02em;
@@ -189,7 +201,7 @@ ol {
   background-color: var(--secondary-bcg-color);
 }
 
-.container.address {
+.footer > .container {
   padding: 60px 0;
   margin-right: auto;
 }
@@ -207,6 +219,7 @@ ol {
   display: inline-block;
   margin-top: 20px;
   margin-bottom: 9px;
+
   color: var(--primary-white-color);
 }
 
@@ -221,16 +234,19 @@ ol {
 /* ! ===================================INDEX.HTML=================================== */
 /** Hero */
 .hero {
+  padding: 200px 0;
+
   background-color: var(--secondary-bcg-color);
   text-align: center;
-  padding: 200px 0;
 }
 
 .hero-title {
   display: block;
   width: 696px;
   margin: 0 auto 30px;
+
   color: var(--primary-white-color);
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -241,15 +257,16 @@ ol {
 /** Button */
 .button {
   display: block;
+  min-width: 200px;
   padding: 10px 32px;
   margin-left: auto;
   margin-right: auto;
-  min-width: 200px;
   border-radius: 4px;
   border: none;
 
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -263,6 +280,7 @@ ol {
 /** Section */
 .section-title {
   margin-bottom: 50px;
+
   color: var(--title-text-color);
   font-size: 36px;
   line-height: 1.16;
@@ -284,6 +302,7 @@ ol {
 
 .feature-title {
   margin-bottom: 10px;
+
   color: var(--title-text-color);
   font-size: inherit;
   line-height: 1.14;
@@ -304,30 +323,34 @@ ol {
 }
 
 /** Staff */
-.team {
-  display: flex;
-}
-
 .staff {
   background-color: var(--staff-section-bcg-color);
 }
 
+.team {
+  display: flex;
+  margin-right: calc(-1 * var(--item-gap));
+}
+
 .team-member {
+  display: block;
   width: 270px;
-  padding-bottom: 30px;
+
   background-color: var(--primary-white-color);
 }
 
-.team .team-member:not(:last-child) {
-  margin-right: 30px;
+.team > .team-member {
+  flex-basis: calc(100% / 4 - var(--item-gap));
+  margin-right: var(--item-gap);
 }
 
-.member-photo {
-  margin-bottom: 30px;
+.member-info {
+  padding: 30px 0;
 }
 
 .member-name {
   margin-bottom: 10px;
+
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -344,10 +367,6 @@ ol {
 /* ! ===================================THE END OF INDEX.HTML=================================== */
 
 /* ! =====================================PORTFOLIO.HTML=====================================*/
-.section.gallery {
-  padding: 94px 0;
-}
-
 .filters {
   display: flex;
   justify-content: center;
@@ -358,6 +377,7 @@ ol {
   padding: 6px 22px;
   border-radius: 4px;
   border: 0px;
+
   color: var(--title-text-color);
   background-color: var(--filter-bcg-color);
   font-weight: 500;
@@ -380,30 +400,37 @@ ol {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  margin-right: calc(-1 * var(--item-gap));
+  margin-bottom: calc(-1 * var(--item-gap));
 }
 
-.project {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid var(--portfolio-border-color);
+.portfolio > .project {
+  flex-basis: calc(100% / 3 - var(--item-gap));
+  margin-right: var(--item-gap);
+  margin-bottom: var(--item-gap);
 }
 
-.project:nth-child(3n) {
-  margin-right: 0;
-}
-
-.project:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+.project-card {
+  display: block;
 }
 
 .project-info {
-  display: block;
   padding: 20px 24px;
+
+  /*! вот так оставил */
+  border-left: 1px solid var(--portfolio-border-color);
+  border-right: 1px solid var(--portfolio-border-color);
+  border-bottom: 1px solid var(--portfolio-border-color);
+
+  /*? вот так же тоже будет правильно? */
+  /* border: 1px solid var(--portfolio-border-color);
+  border-top: none; */
 }
 
 .project-title {
   margin-bottom: 4px;
+
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
@@ -416,14 +443,3 @@ ol {
   line-height: 1.87;
 }
 /* ! ================================THE END OF PORTFOLIO.HTML================================ */
-
-/* 
-
-
-
-/* padding ВО ВСЕХ СЕКЦИЯХ через класс секшн
-
-
-/* font-size 0 там где картинки/линки и дисплей инлайн-блок 
-
-*/
