@@ -201,9 +201,8 @@ ol {
   background-color: var(--secondary-bcg-color);
 }
 
-.footer > .container {
+.footer {
   padding: 60px 0;
-  margin-right: auto;
 }
 
 .footer-contact .link {
