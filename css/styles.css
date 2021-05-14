@@ -6,14 +6,14 @@
 
 :root {
   --item-gap: 30px;
+
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --logo-color: #000000;
+  --primary-bcg-color: #f5f4fa;
   --secondary-bcg-color: #2f303a;
-  --staff-section-bcg-color: #e5e5e5;
-  --filter-bcg-color: #f5f4fa;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
   --header-border-color: #ececec;
   --portfolio-border-color: #eeeeee;
@@ -198,11 +198,13 @@ ol {
 /* ! =====================================FOOTER===================================== */
 /** Footer */
 .footer {
+  padding: 60px 0;
+
   background-color: var(--secondary-bcg-color);
 }
 
-.footer {
-  padding: 60px 0;
+.address {
+  margin-top: 20px;
 }
 
 .footer-contact .link {
@@ -216,7 +218,7 @@ ol {
 
 .footer .location {
   display: inline-block;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-bottom: 9px;
 
   color: var(--primary-white-color);
@@ -323,7 +325,7 @@ ol {
 
 /** Staff */
 .staff {
-  background-color: var(--staff-section-bcg-color);
+  background-color: var(--primary-bcg-color);
 }
 
 .team {
@@ -332,7 +334,6 @@ ol {
 }
 
 .team-member {
-  display: block;
   width: 270px;
 
   background-color: var(--primary-white-color);
@@ -378,7 +379,7 @@ ol {
   border: 0px;
 
   color: var(--title-text-color);
-  background-color: var(--filter-bcg-color);
+  background-color: var(--primary-bcg-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
