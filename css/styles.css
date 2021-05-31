@@ -193,6 +193,22 @@ ol {
   color: var(--accent-color);
 }
 
+.contact-item:nth-child(1)::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 12px;
+
+  background-image: ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bacground-position: center;
+  bacground-color: ;
+}
+
+.contact-item:nth-child(2)::before {
+}
+
 /* ! ===================================END OF HEADER=================================== */
 
 /* ! =====================================FOOTER===================================== */
@@ -443,3 +459,59 @@ ol {
   line-height: 1.87;
 }
 /* ! ================================THE END OF PORTFOLIO.HTML================================ */
+
+/* 
+
+оверлей!
+
+макс.ширина 1600
+бки и есть картинка большая (ноу рипит, сентер, кавер)
+
+градиент первым 
+(to right и два одинаковых цвета от и до)
+
+
+бекграуд колор ВСЕГДА
+
+у меня стоит в картинках где есть радиус оверфлоу:хиден?
+
+
+
+ДЕКОРАТИВНЫЕ (в сиэсэс)
+там где контакты, герой, спутниковая антена..., соц.сети
+на кнопке
+
+ИКОНКА = СВГ
+
+спутниковая антена
+li::before {
+  display: block;
+  content: '';
+  height: 120px;
+ 
+  background-size: contain;
+  background-repeat: no-repeat;
+  bacground-position: center;
+  bacground-color: ;
+
+}
+
+даем отдельный класс лишечкам
+.icon-delivery::before {
+   background-image: url() ;
+}
+
+либо .list-item:nth-child(1)::before {
+  background-image: url() ;
+}
+
+соц.сети не через бифор, а просто бекграунд фон
+
+
+
+ФОНОВЫЕ (в хтмл)
+чем занимаемся, команда, клиенты, проекты
+
+
+
+*/
